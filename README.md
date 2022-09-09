@@ -19,4 +19,4 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.umee/conf
 peers="07fd2c5b8838dfc80ff1e9c5577006b552fcb98c@194.163.140.3:26659" \
 && sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.umee/config/config.toml 
 
-sudo systemctl restart umeed.service && sudo journalctl -u umeed.service -f -o cat
+sudo systemctl restart umeed && sudo journalctl -u umeed -f -o cat
